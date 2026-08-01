@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of /.well-known/* on the production host
+host: https://www.perfectstay.com
+notes: All /.well-known/* paths return HTTP 403 (edge/WAF blocks the path prefix); no discovery documents are published.
+documents:
+- path: /.well-known/security.txt
+  status: 403
+- path: /.well-known/openid-configuration
+  status: 403
+- path: /.well-known/oauth-authorization-server
+  status: 403
+- path: /.well-known/api-catalog
+  status: 403
+- path: /.well-known/ai-plugin.json
+  status: 403
